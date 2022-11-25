@@ -7,5 +7,5 @@ The Artemis-Loader project contains the entire UI as well as most of the back-en
 This app is written using [.NET](https://dotnet.microsoft.com/en-us/) utilizing their Windows-Specific [Windows Presentation Foundation](https://github.com/dotnet/wpf) UI framework in XAML and C#.
 
 ## Artemis-Loader-Helper
-The Artemis-Loader-Helper project is a helper project for the Loader, written in C++ as a [.NET](https://dotnet.microsoft.com/en-us/)/[CLI](https://learn.microsoft.com/en-us/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) project.
+The Artemis-Loader-Helper project is a helper project for the Loader, written as a [.NET](https://dotnet.microsoft.com/en-us/) C++/[CLI](https://learn.microsoft.com/en-us/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) project.
 This project contains all the code depending on the Windows-API library and other low level libraries, such as but not limited to; The dll injector, Named Pipe system, et cetera.
