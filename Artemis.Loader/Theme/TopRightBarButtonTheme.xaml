@@ -7,12 +7,14 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <TextBlock Text="{TemplateBinding Property=Content}"
-                                   Foreground="White"
+                        <Border Background="{TemplateBinding Background}">
+                            <TextBlock Text="{TemplateBinding Property=Content}"
+                                   Foreground="{TemplateBinding Foreground}"
                                    FontSize="15"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
                                    Margin="{TemplateBinding Property=Margin}"/>
+                        </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Controls;
 using System.IO;
 
 using Artemis.Loader.Core;
+using System.Windows.Media;
 
 namespace Artemis.Loader
 {
@@ -74,6 +76,24 @@ namespace Artemis.Loader
             TrayIconInstance.HideIcon();
             TrayIconInstance.Release();
             Application.Current.Shutdown();
+        }
+
+        private void OnEnter_ChangeRed(object sender, MouseEventArgs e)
+        {
+            Control c = (Control)sender;
+            c.Background = Brushes.Red;
+        }
+
+        private void OnEnter_ChangeGray(object sender, MouseEventArgs e)
+        {
+            Control c = (Control)sender;
+            c.Background = new BrushConverter().ConvertFromString("#2A2A2A") as Brush;
+        }
+
+        private void OnLeave_Reset(object sender, MouseEventArgs e)
+        {
+            Control c = (Control)sender;
+            c.Background = Brushes.Transparent;
         }
 
         private void TopBorder_OnMouseDown(object sender, MouseButtonEventArgs e)

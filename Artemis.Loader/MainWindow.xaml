@@ -38,18 +38,24 @@
                     </Grid.ColumnDefinitions>
 
                     <Button Grid.Column="1"
+                            Foreground="White"
                             Name="btnmin"
                             Click="OnClick_Minimize"
                             Content="⎯"
                             Margin="0,-2,2,0"
-                            Style="{StaticResource ExitButtonTheme}"/>
+                            Style="{StaticResource ExitButtonTheme}"
+                            MouseEnter="OnEnter_ChangeGray"
+                            MouseLeave="OnLeave_Reset"/>
 
                     <Button Grid.Column="2"
+                            Foreground="White"
                             Name="btnexit"
                             Click="OnClick_Exit"
                             Content="✕"
                             Margin="0,-1,0,0"
-                            Style="{StaticResource ExitButtonTheme}"/>
+                            Style="{StaticResource ExitButtonTheme}"
+                            MouseEnter="OnEnter_ChangeRed"
+                            MouseLeave="OnLeave_Reset"/>
 
                 </Grid>
             </Border>
