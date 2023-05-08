@@ -1,4 +1,4 @@
-![Artemis](https://github.com/ArtemisDevGroup/Artemis-Resources/blob/main/Text/ArtemisWithLogo.png)
+![Artemis Loader](https://raw.githubusercontent.com/ArtemisDevGroup/Artemis-Resources/main/Text/ArtemisLoader.png)
 # Overview
 This repostitory contains two projects used for loading the Artemis Module into the game.
 
