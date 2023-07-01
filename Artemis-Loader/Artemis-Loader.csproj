@@ -7,14 +7,21 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Icons\logo.ico</ApplicationIcon>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Blanka-Regular.otf" />
     <None Remove="Icons\logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Icons\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Blanka-Regular.otf" />
   </ItemGroup>
 
   <ItemGroup>

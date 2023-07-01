@@ -10,7 +10,9 @@ namespace Artemis_Loader.ViewModels
     class MainViewModel : ObservableObject
     {
         public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand AboutViewCommand { get; set; }
         public HomeViewModel HomeView { get; set; }
+        public object AboutView { get; set; }
 
         private object _currentView;
         public object CurrentView
@@ -27,6 +29,9 @@ namespace Artemis_Loader.ViewModels
         {
             HomeView = new HomeViewModel();
             HomeViewCommand = new RelayCommand(o => CurrentView = HomeView);
+
+            AboutView = new object();
+            AboutViewCommand = new RelayCommand(o => CurrentView = AboutView);
 
             CurrentView = HomeView;
         }

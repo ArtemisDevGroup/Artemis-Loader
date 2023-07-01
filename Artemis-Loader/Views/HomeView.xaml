@@ -12,7 +12,7 @@
     </UserControl.DataContext>
     <Border Background="Purple">
         <TextBlock Foreground="White"
-                   Text="Hello guys!"
+                   Text="Placeholder text spacing test"
                    FontSize="28"
                    Margin="5"/>
     </Border>

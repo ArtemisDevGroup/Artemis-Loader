@@ -21,10 +21,14 @@ namespace Artemis_Loader
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow() => InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
         private void TopBorder_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
         private void MinimizeButton_Click(object sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
         private void ExitButton_Click(object sender, RoutedEventArgs e) => Artemis.Exit();
+        private void HomeViewButton_Loaded(object sender, RoutedEventArgs e) => ((RadioButton)sender).IsChecked = true;
     }
 }
