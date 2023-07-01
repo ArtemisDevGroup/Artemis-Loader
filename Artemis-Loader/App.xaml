@@ -1,0 +1,23 @@
+﻿<Application x:Class="Artemis_Loader.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Artemis_Loader"
+             xmlns:ViewModels="clr-namespace:Artemis_Loader.ViewModels"
+             xmlns:Views="clr-namespace:Artemis_Loader.Views"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/TopRightButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles/HamburgerButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Brush x:Key="MainBackgroundColor">#181818</Brush>
+            <Brush x:Key="AlternateBackgroundColor">#111</Brush>
+            
+            <DataTemplate DataType="{x:Type ViewModels:HomeViewModel}">
+                <Views:HomeView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,150 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Thickness x:Key="HamburgerButtonBorderDefaultMargin">6,0,0,0</Thickness>
+
+    <KeyTime x:Key="HamburgerButtonCheckedUncheckedExpandKeyTime">0:0:0.1</KeyTime>
+    <KeyTime x:Key="HamburgerButtonEnterLeaveExpandKeyTime">0:0:0.2</KeyTime>
+
+    <Style TargetType="{x:Type Border}"
+           x:Key="HamburgerButtonBorder">
+        <Style.Setters>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Width" Value="28"/>
+            <Setter Property="Height" Value="4"/>
+            <Setter Property="CornerRadius" Value="2"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="{StaticResource HamburgerButtonBorderDefaultMargin}"/>
+        </Style.Setters>
+    </Style>
+
+    <Style TargetType="{x:Type Border}"
+           x:Key="HamburgerButtonBodyBorder">
+        <Style.Setters>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <SolidColorBrush/>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Border.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Storyboard.TargetProperty="Background.Color"
+                                        From="#111"
+                                        To="#181818"
+                                        Duration="0:0:0.2"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="Border.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Storyboard.TargetProperty="Background.Color"
+                                        From="#181818"
+                                        To="#111"
+                                        Duration="0:0:0.2"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+           TargetType="{x:Type ToggleButton}"
+           x:Key="HamburgerButtonStyle">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border Style="{StaticResource HamburgerButtonBodyBorder}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Border Grid.Row="1"
+                                        Style="{StaticResource HamburgerButtonBorder}"
+                                        x:Name="TopBorder"/>
+
+                                <Border Grid.Row="2"
+                                        Style="{StaticResource HamburgerButtonBorder}"
+                                        x:Name="MiddleBorder"/>
+
+                                <Border Grid.Row="3"
+                                        Style="{StaticResource HamburgerButtonBorder}"
+                                        x:Name="BottomBorder"/>
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                          Storyboard.TargetProperty="Margin">
+                                            <SplineThicknessKeyFrame KeyTime="{StaticResource HamburgerButtonCheckedUncheckedExpandKeyTime}" Value="16,0,0,0"/>
+                                        </ThicknessAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="MiddleBorder"
+                                                                          Storyboard.TargetProperty="Margin">
+                                            <SplineThicknessKeyFrame KeyTime="{StaticResource HamburgerButtonCheckedUncheckedExpandKeyTime}" Value="26,0,0,0"/>
+                                        </ThicknessAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="BottomBorder"
+                                                                          Storyboard.TargetProperty="Margin">
+                                            <SplineThicknessKeyFrame KeyTime="{StaticResource HamburgerButtonCheckedUncheckedExpandKeyTime}" Value="36,0,0,0"/>
+                                        </ThicknessAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                          Storyboard.TargetProperty="Margin">
+                                            <SplineThicknessKeyFrame KeyTime="{StaticResource HamburgerButtonCheckedUncheckedExpandKeyTime}" Value="{StaticResource HamburgerButtonBorderDefaultMargin}"/>
+                                        </ThicknessAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="MiddleBorder"
+                                                                          Storyboard.TargetProperty="Margin">
+                                            <SplineThicknessKeyFrame KeyTime="{StaticResource HamburgerButtonCheckedUncheckedExpandKeyTime}" Value="{StaticResource HamburgerButtonBorderDefaultMargin}"/>
+                                        </ThicknessAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="BottomBorder"
+                                                                          Storyboard.TargetProperty="Margin">
+                                            <SplineThicknessKeyFrame KeyTime="{StaticResource HamburgerButtonCheckedUncheckedExpandKeyTime}" Value="{StaticResource HamburgerButtonBorderDefaultMargin}"/>
+                                        </ThicknessAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>
