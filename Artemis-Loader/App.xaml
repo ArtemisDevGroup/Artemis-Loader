@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="Styles/TopRightButtonStyle.xaml"/>
                 <ResourceDictionary Source="Styles/HamburgerButtonStyle.xaml"/>
                 <ResourceDictionary Source="Styles/NavigationButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ButtonStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <Brush x:Key="MainBackgroundColor">#181818</Brush>

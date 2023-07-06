@@ -14,6 +14,17 @@
   <ItemGroup>
     <None Remove="Fonts\Blanka-Regular.otf" />
     <None Remove="Icons\logo.ico" />
+    <None Remove="Images\About.png" />
+    <None Remove="Images\Browser.png" />
+    <None Remove="Images\Developer.png" />
+    <None Remove="Images\Extension.png" />
+    <None Remove="Images\FullBlur.jpg" />
+    <None Remove="Images\Home.png" />
+    <None Remove="Images\Logo256x.png" />
+    <None Remove="Images\NoBlur.jpg" />
+    <None Remove="Images\PartialBlur.png" />
+    <None Remove="Images\Placeholder.png" />
+    <None Remove="Images\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +37,17 @@
 
   <ItemGroup>
     <Resource Include="Icons\logo.ico" />
+    <Resource Include="Images\About.png" />
+    <Resource Include="Images\Browser.png" />
+    <Resource Include="Images\Developer.png" />
+    <Resource Include="Images\Extension.png" />
+    <Resource Include="Images\FullBlur.jpg" />
+    <Resource Include="Images\Home.png" />
+    <Resource Include="Images\Logo256x.png" />
+    <Resource Include="Images\NoBlur.jpg" />
+    <Resource Include="Images\PartialBlur.png" />
+    <Resource Include="Images\Placeholder.png" />
+    <Resource Include="Images\Settings.png" />
   </ItemGroup>
 
 </Project>

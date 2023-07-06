@@ -64,6 +64,8 @@
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
@@ -99,14 +101,49 @@
                                      Loaded="HomeViewButton_Loaded"
                                      Command="{Binding HomeViewCommand}">
                             <RadioButton.Content>
-                                <Core:NavigationButtonParameters ImageUri="C:\Users\douglas.lyman\source\repos\ArtemisDevGroup\Artemis-Loader\Artemis-Loader\Icons\logo.ico" Description="Test"/>
+                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/Home.png" Description="Home"/>
                             </RadioButton.Content>
                         </RadioButton>
 
                         <RadioButton Grid.Row="2"
                                      Style="{StaticResource NavigationButtonStyle}"
-                                     Command="{Binding AboutViewCommand}"
-                                     Content="A"/>
+                                     Command="{Binding ExtensionViewCommand}">
+                            <RadioButton.Content>
+                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/Extension.png" Description="Extensions"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        <RadioButton Grid.Row="3"
+                                     Style="{StaticResource NavigationButtonStyle}"
+                                     Command="{Binding BrowserViewCommand}">
+                            <RadioButton.Content>
+                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/Browser.png" Description="Browser"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        <RadioButton Grid.Row="4"
+                                     Style="{StaticResource NavigationButtonStyle}"
+                                     Command="{Binding DeveloperViewCommand}">
+                            <RadioButton.Content>
+                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/Developer.png" Description="Developer"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        <RadioButton Grid.Row="5"
+                                     Style="{StaticResource NavigationButtonStyle}"
+                                     Command="{Binding SettingsViewCommand}">
+                            <RadioButton.Content>
+                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/Settings.png" Description="Settings"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        
+                        <RadioButton Grid.Row="6"
+                                     Style="{StaticResource NavigationButtonStyle}"
+                                     Command="{Binding AboutViewCommand}">
+                            <RadioButton.Content>
+                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/About.png" Description="About"/>
+                            </RadioButton.Content>
+                        </RadioButton>
                     </Grid>
                 </Border>
 

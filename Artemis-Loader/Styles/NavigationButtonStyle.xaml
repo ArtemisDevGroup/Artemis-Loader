@@ -27,7 +27,7 @@
                                     <Image Grid.Column="0"
                                            Source="{Binding Content.ImageUri, RelativeSource={RelativeSource TemplatedParent}}"
                                            Width="40"
-                                           Margin="3"/>
+                                           Margin="4"/>
 
                                     <TextBlock Grid.Column="1"
                                                Text="{Binding Content.Description, RelativeSource={RelativeSource TemplatedParent}}"
