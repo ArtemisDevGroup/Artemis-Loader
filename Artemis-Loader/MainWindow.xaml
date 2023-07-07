@@ -131,17 +131,17 @@
 
                         <RadioButton Grid.Row="5"
                                      Style="{StaticResource NavigationButtonStyle}"
-                                     Command="{Binding SettingsViewCommand}">
-                            <RadioButton.Content>
-                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/Settings.png" Description="Settings"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        
-                        <RadioButton Grid.Row="6"
-                                     Style="{StaticResource NavigationButtonStyle}"
                                      Command="{Binding AboutViewCommand}">
                             <RadioButton.Content>
                                 <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/About.png" Description="About"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        <RadioButton Grid.Row="6"
+                                     Style="{StaticResource NavigationButtonStyle}"
+                                     Command="{Binding SettingsViewCommand}">
+                            <RadioButton.Content>
+                                <Core:NavigationButtonParameters ImageUri="pack://application:,,,/Images/Settings.png" Description="Settings"/>
                             </RadioButton.Content>
                         </RadioButton>
                     </Grid>

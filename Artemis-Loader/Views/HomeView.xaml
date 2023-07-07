@@ -12,45 +12,43 @@
     </UserControl.DataContext>
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="150"/>
-        </Grid.RowDefinitions>
-        
-        <Image Grid.RowSpan="2"
-               Source="pack://application:,,,/Images/PartialBlur.png"
+        <Image Source="pack://application:,,,/Images/NoBlur.jpg"
+               Height="520"
                Stretch="UniformToFill"
-               HorizontalAlignment="Center"/>
+               HorizontalAlignment="Right"/>
 
-        <Image Source="pack://application:,,,/Images/Logo256x.png"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Bottom"
-               Margin="20"
-               Height="256"/>
-
-        <TextBlock Grid.Row="1"
-                   Text="Artemis"
-                   Foreground="White"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Top"
-                   FontSize="76"
-                   FontFamily="{StaticResource ArtemisFont}"/>
-
-        <Grid Grid.RowSpan="2">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
+                <RowDefinition Height="128"/>
                 <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="450"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="1"
+            <Image Grid.Row="1"
+                   Grid.Column="1"
+                   Source="pack://application:,,,/Images/Logo256x.png"/>
+
+            <TextBlock Grid.Row="2"
+                       Grid.Column="1"
+                       Text="Artemis"
+                       FontFamily="{StaticResource ArtemisFont}"
+                       FontSize="80"
+                       Foreground="White"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+
+            <Button Grid.Row="3"
+                    Grid.Column="1"
                     Style="{StaticResource ButtonStyle}"
-                    Margin="20"
-                    Content="Play"
+                    Margin="60,20,60,20"
+                    Content="!!Play"
                     FontSize="20"/>
         </Grid>
     </Grid>
