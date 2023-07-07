@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Artemis_Loader.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -21,11 +22,16 @@ namespace Artemis_Loader
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow() => InitializeComponent();
+        private MessageRecipent? recipent;
+        public MainWindow()
+        {
+            InitializeComponent();
+            recipent = new MessageRecipent(this);
+        }
 
         private void TopBorder_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
         private void MinimizeButton_Click(object sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
-        private void ExitButton_Click(object sender, RoutedEventArgs e) => Artemis.Exit();
+        private void ExitButton_Click(object sender, RoutedEventArgs e) => Artemis.Exit(recipent);
         private void HomeViewButton_Loaded(object sender, RoutedEventArgs e) => ((RadioButton)sender).IsChecked = true;
     }
 }
