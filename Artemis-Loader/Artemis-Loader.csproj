@@ -15,7 +15,6 @@
     <None Remove="Fonts\Blanka-Regular.otf" />
     <None Remove="Icons\logo.ico" />
     <None Remove="Images\About.png" />
-    <None Remove="Images\ArtemisWithLogo.png" />
     <None Remove="Images\Browser.png" />
     <None Remove="Images\Developer.png" />
     <None Remove="Images\Extension.png" />
@@ -39,7 +38,6 @@
   <ItemGroup>
     <Resource Include="Icons\logo.ico" />
     <Resource Include="Images\About.png" />
-    <Resource Include="Images\ArtemisWithLogo.png" />
     <Resource Include="Images\Browser.png" />
     <Resource Include="Images\Developer.png" />
     <Resource Include="Images\Extension.png" />
