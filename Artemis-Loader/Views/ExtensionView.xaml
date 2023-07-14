@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Artemis_Loader.Views.ExtensionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Artemis_Loader.Views"
+             xmlns:ViewModels="clr-namespace:Artemis_Loader.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignWidth="920" d:DesignHeight="520">
+    <UserControl.DataContext>
+        <ViewModels:ExtensionViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+            
+    </Grid>
+</UserControl>

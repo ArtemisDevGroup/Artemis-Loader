@@ -40,7 +40,7 @@ namespace Artemis_Loader.Core
             {
                 byte[] bytes = reader.ReadBytes(Marshal.SizeOf<Message>());
 
-                nint ptr = nint.Zero;
+                IntPtr ptr = IntPtr.Zero;
                 try
                 {
                     ptr = Marshal.AllocHGlobal(Marshal.SizeOf<Message>());
@@ -126,7 +126,7 @@ namespace Artemis_Loader.Core
             int size = Marshal.SizeOf<Message>();
             byte[] bytes = new byte[size];
 
-            nint ptr = nint.Zero;
+            IntPtr ptr = IntPtr.Zero;
             try
             {
                 ptr = Marshal.AllocHGlobal(size);

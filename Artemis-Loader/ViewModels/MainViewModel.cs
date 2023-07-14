@@ -17,7 +17,7 @@ namespace Artemis_Loader.ViewModels
         public RelayCommand AboutViewCommand { get; set; }
 
         public HomeViewModel HomeView { get; set; }
-        public object ExtensionView { get; set; }
+        public ExtensionViewModel ExtensionView { get; set; }
         public object BrowserView { get; set; }
         public object DeveloperView { get; set; }
         public object SettingsView { get; set; }
@@ -39,7 +39,7 @@ namespace Artemis_Loader.ViewModels
             HomeView = new HomeViewModel();
             HomeViewCommand = new RelayCommand(o => CurrentView = HomeView);
 
-            ExtensionView = new object();
+            ExtensionView = new ExtensionViewModel();
             ExtensionViewCommand = new RelayCommand(o => CurrentView = ExtensionView);
 
             BrowserView = new object();

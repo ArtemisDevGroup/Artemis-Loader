@@ -22,6 +22,10 @@
             <DataTemplate DataType="{x:Type ViewModels:HomeViewModel}">
                 <Views:HomeView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModels:ExtensionViewModel}">
+                <Views:ExtensionView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
