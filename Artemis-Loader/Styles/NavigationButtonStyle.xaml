@@ -38,8 +38,6 @@
                                                FontSize="18"/>
                                 </Grid>
 
-                                <!-- TextBlock is a placeholder for the button icon. -->
-
                                 <Border Grid.Row="1"
                                         x:Name="IsCheckedBorder"
                                         Background="White"

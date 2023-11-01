@@ -54,7 +54,7 @@ namespace Artemis_Loader.ViewModels
             AboutView = new object();
             AboutViewCommand = new RelayCommand(o => CurrentView = AboutView);
 
-            CurrentView = HomeView;
+            _currentView = HomeView;
         }
     }
 }

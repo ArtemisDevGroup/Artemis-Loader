@@ -35,14 +35,10 @@
 
                     <Button Grid.Column="1"
                             Style="{StaticResource MinimizeButtonStyle}"
-                            Content="—"
-                            Margin="0,0,0,2"
                             Click="MinimizeButton_Click"/>
 
                     <Button Grid.Column="2"
                             Style="{StaticResource ExitButtonStyle}"
-                            Content="✕"
-                            Margin="0,0,0,1"
                             Click="ExitButton_Click"/>
                 </Grid>
             </Border>
